@@ -1,0 +1,196 @@
+//basic program to demonstrate String class
+import java.util.*;
+class Stringclass{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the string :");
+        String name=sc.nextLine();
+        System.out.println("the name entered is :"+" "+name);
+    }
+}
+//concatenation of strings
+import java.util.*;
+class StringConcat{
+    public static void main(String []args){ 
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the first string :");
+        String first=sc.nextLine();
+        System.out.println("enter the second string :");
+        String second=sc.nextLine();
+        String full=first.concat(second);
+        System.out.println("the concatenated string is :"+" "+full);
+    }
+}
+    //length of string
+    import java.util.*;
+public class StringsLength{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the string :");
+        String name=sc.nextLine();
+        System.out.println(name.length());
+    }
+}
+///charAt() method
+{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the string :");
+        String name=sc.nextLine();
+        for( int i=0;i<=name.length();i++){
+                    System.out.println(name.charAt(i));
+
+        }
+    }
+}
+//access random character from string
+import java.util.*;
+public class Strings{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the string :");
+        String name=sc.nextLine();
+       
+                    System.out.println(name.charAt(2));
+
+        }
+    }
+    //compare two strings
+    import java.util.*;
+public class Strings{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the first string :");
+        String nameOne=sc.nextLine();
+        System.out.println("enter the first string :");
+        String nameTwo=sc.nextLine();
+        int result=nameOne.compareTo(nameTwo);
+        if(result==0){
+                   System.out.println("both are equal");
+                   
+    
+}else{
+    System.out.println("both are not equaL");
+
+ if(result>0){
+    System.out.println(nameOne +" "+"is greater ");
+   } else{
+        System.out.println(nameTwo+" "+"is greater");
+    }
+}
+    }
+}
+//substring method
+import java.util.*;
+public class Strings{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+       String name="mohammad";
+       System.out.println(name.substring(1,5));
+    }
+}
+//strings are immutable
+import java.util.*;
+public class Strings{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+       String name="hello";
+       name.concat("world");
+       System.out.println(name);
+    }
+}
+// parseInt() method (string to integer)
+import java.util.*;
+public class Strings{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+       String s="12345";
+       int n=Integer.parseInt(s);
+       System.out.println(n);
+              System.out.println("enter the number: ");
+
+       int m=sc.nextInt();
+       System.out.println(n+m);
+    }
+}
+// toString method (integer to string)
+import java.util.*;
+public class Strings{
+    public static void main(String []args){
+        Scanner sc=new Scanner (System.in);
+       int s=12345;
+       String n=Integer.toString(s);
+       System.out.println(n);
+       System.out.println(n+10);
+        
+    }
+}
+//Take an array of Strings input from the user & find the cumulative (combined) length of all those strings.
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner (System.in);
+          System.out.println("Enter the Size :  ");
+        int size=sc.nextInt();
+        String array[]= new String[size];
+        int totlength=0;
+        for(int i=0;i<size;i++){
+            System.out.println("enter the array string");
+            array[i]=sc.next();
+            totlength=totlength+array[i].length();
+        }
+        System.out.println("total length is:  "+totlength);
+    }
+}
+
+// //Input a string from the user. Create a new string called ‘result’ in which you will replace the letter ‘e’ in the original string with letter ‘i’. 
+// Example : 
+// original = “eabcdef’ ; result = “iabcdif”
+// Original = “xyz” ; result = “xyz”
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner (System.in);
+        System.out.println("enter the string name : ");
+          String str=sc.next();
+          String result="";
+          for(int i=0;i<str.length();i++){
+              if(str.charAt(i)=='e'){
+                  result=result+'i';
+                  
+                }else{
+                      result=result+str.charAt(i);
+                      }}
+                      
+                      System.out.println("the result is :"+result);
+            
+    }
+          
+}
+// //
+// Input an email from the user. You have to create a username from the email by deleting the part that comes after ‘@’. Display that username to the user.
+// Example : 
+// email = “apnaCollegeJava@gmail.com” ; username = “apnaCollegeJava” 
+// email = “helloWorld123@gmail.com”; username = “helloWorld123”
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner (System.in);
+        System.out.println("enter the string name : ");
+          String email=sc.next();
+          String username="";
+          for(int i=0;i<email.length();i++){
+              if(email.charAt(i)=='@'){
+                break;
+                  
+                }else{
+                      username=username+email.charAt(i);
+                      }
+          }
+                      
+                      System.out.println("the username :"+username);
+            
+    }
+          
+}
