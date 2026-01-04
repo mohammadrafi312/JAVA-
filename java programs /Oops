@@ -1,0 +1,265 @@
+///creating clsass for object 
+class Pen{
+    String color;
+    String type;
+
+    public void write(){
+        System.out.println("Writing something");
+    }
+    public void printColor(){
+        System.out.println(this.color);
+    }
+}
+   public class Oops{
+    public static void main(String[] args){
+        //creating object for the class pen
+        Pen pen1 = new Pen();
+        pen1.color = "Blue";
+        pen1.type = "Gel";
+
+        pen1.write();
+        pen1.printColor();
+   }
+}
+// access modifiers are four types publis privste protected default
+// public : accessible from anywhere
+// private : accessible within the class only
+// protected : accessible within the package and subclass
+// default : accessible within the package only
+// this keyword : refers to the current object
+
+
+
+//getter and setter methods
+   public class Oops{
+    public static void main(String[] args){
+        //creating object for the class pen
+        Pen pen1 = new Pen();
+        pen1.setColor("Blue");
+        pen1.type = "Gel";
+System.out.println(pen1.getColor());
+        pen1.write();
+        pen1.printColor();
+   }
+}
+class Pen{
+    String color;
+    String type;
+
+    public void write(){
+        System.out.println("Writing something");
+    }
+    public void printColor(){
+        System.out.println(this.color);
+    }
+    void setColor(String color){
+        this.color=color;
+    }
+    String getColor(){
+        return this.color;
+    }
+}
+// constructors :   
+// special method used to initialize objects
+// same name as the class
+// no return type
+  public class Oops{
+    public static void main(String[] args){
+        //creating object for the class pen
+        Student s1 = new Student("blue",23);
+        System.out.println(s1.getName());
+        System.out.println(s1.getRollNo());
+
+    }
+  }
+class Student{
+     private String name;
+    private int rollNo;
+    Student(String name,int rollNo){
+        this.name=name;
+        this.rollNo=rollNo;
+    }
+   public String getName(){
+        return this.name;
+    }
+    public int getRollNo(){
+        return this.rollNo;
+    }
+}
+
+///types of constructors 
+/// parameterized constructor and non parameterized constructor
+/// copy constructor
+
+
+
+
+
+//example of parameterized constructor
+//example of parameterized constructor
+public class Main{
+    public static void main(String[] args){
+        //creating object for the class student
+        Student s1 = new Student("rafi",23);
+        s1.display();
+    }
+}
+class Student{
+     private String name;
+    private int rollNo;
+ Student(String name,int rollNo){
+        this.name=name;
+        this.rollNo=rollNo;
+    }
+    public void display(){
+        System.out.println("Name.  : " + this.name+ "\n" + "Roll No: " + this.rollNo);
+    }
+}
+public class Oops{
+    public static void main(String[] args){
+        //creating object for the class student
+        Student s1 = new Student("rafi",23);
+        s1.display();
+    }
+}
+//non parameterized constructor
+        public class Main{
+    public static void main(String[] args){
+        //creating object for the class student
+        Student s1 = new Student();
+       
+    }
+}
+class Student{
+     private String name;
+    private int rollNo;
+ Student(){
+   this.name="rafi";
+        System.out.println("Name.  : " + this.name+ "\n" + "Roll No: " + this.rollNo);
+    }
+}
+//consructor overloading
+ ppublic class Main{
+    public static void main(String[] args){
+        //creating object for the class student
+        Student s1 = new Student();
+        Student s2 =new Student("rafi");
+        Student s3 =new Student("rafi",23);
+
+       
+    }
+}
+class Student{
+     private String name;
+    private int rollNo;
+ Student(){
+   this.name="rafi";
+        System.out.println("Name.  : " + this.name);
+    }
+    Student(String name){
+        this.name=name;
+                        System.out.println("name : " + this.name);
+
+    }
+    Student (String name,int rollNo){
+        this.name=name;
+        this.rollNo=rollNo;
+                System.out.println("Name.  : " + this.name + " || "+"   roll no :"+ rollNo);
+
+    }
+}
+
+//copy constructor
+ public class Main{
+   public class Main{
+    public static void main(String[] args){
+        //creating object for the class student
+        Student s1 = new Student();
+        Student s2 =new Student(s1);
+
+       
+    }
+}
+class Student{
+     private String name;
+    private int rollNo;
+ Student(){
+   this.name="rafi";
+        System.out.println("Name.  : " + this.name);
+    }
+    Student(Student s1){
+        this.name=s1.name;
+       System.out.println("name : " + this.name);
+
+    }
+  
+
+    }
+ }
+ //shallow copy 
+ //shallow copy
+class Main {
+    public static void main(String[] args) {
+        Student id1= new Student();
+        Student id2=new Student(id1);
+    }
+}
+class Student{
+    String name;
+    String address;
+    int marks;
+    int age ;
+    Student(){
+ this.name="rafi";
+        this.address="venu gopala puram";
+        this.marks=80;
+        this.age=21;
+        System.out.println("name :"+name+" "+",address :"+address+", marks : "+marks+",age : "+age);
+           }
+Student (Student id1){
+    this.name=id1.name;
+    this.address=id1.address;
+    this.marks=id1.marks;
+        System.out.println("name :"+name+" "+",address :"+address+", marks : "+marks+",age : "+age);
+}
+}
+//deep copy
+
+//shallow copy
+class Main {
+    public static void main(String[] args) {
+        Student id1= new Student();
+        Student id2=new Student(id1);
+        id2.marks[2]=88;//here the marks changes using the reference of id1
+        // for (int i=0;i<3;i++){
+        //     System.out.println(id2.marks[i]);
+        // }
+        
+        
+        
+    }
+}
+class Student{
+    String name;
+    String address;
+    int marks[]=new int[3];
+    int age ;
+    Student(){
+        this.name="rafi";
+        this.address="venu gopala puram";
+        this.marks[0]=85;
+       this. marks[1]=89;
+        this.marks[2]=82;
+        this.age=21;
+    }
+     Student (Student id1){
+        //  this.name=id1.name;
+        //  this.address=id1.address;
+        //  this.marks=id1.marks;
+          for (int i=0;i<3;i++){
+            System.out.println(id1.marks[i]);
+        }
+        
+        
+}
+}
